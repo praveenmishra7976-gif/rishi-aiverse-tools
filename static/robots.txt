@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://rishi-aiverse-tools.onrender.com/sitemap.xml
