@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Tools Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    🚀 Free Tools Hub
+</div>
+
+<div class="hero">
+    <h1>100% Free AI & Online Tools</h1>
+    <p>Fast • Secure • No Registration Required</p>
+</div>
+
+<div class="tools">
+
+<div class="card">
+<h3>📱 QR Code Generator</h3>
+<a href="#">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>🔐 Password Generator</h3>
+<a href="#">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>🎂 Age Calculator</h3>
+<a href="#">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>⚖️ BMI Calculator</h3>
+<a href="#">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>🔤 Word Counter</h3>
+<a href="#">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>🔠 Text Case Converter</h3>
+<a href="#">Open Tool</a>
+</div>
+
+</div>
+
+</body>
+</html>

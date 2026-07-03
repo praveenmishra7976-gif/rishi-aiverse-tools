@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    📏 Unit Converter
+</div>
+
+<div class="hero">
+
+<h2>Unit Converter</h2>
+
+<form method="POST">
+
+<input
+type="number"
+step="any"
+name="value"
+placeholder="Enter value"
+required>
+
+<br><br>
+
+<select name="conversion">
+
+<option value="km_to_m">Kilometers → Meters</option>
+
+<option value="m_to_km">Meters → Kilometers</option>
+
+<option value="kg_to_g">Kilograms → Grams</option>
+
+<option value="g_to_kg">Grams → Kilograms</option>
+
+<option value="c_to_f">Celsius → Fahrenheit</option>
+
+<option value="f_to_c">Fahrenheit → Celsius</option>
+
+</select>
+
+<br><br>
+
+<button type="submit">
+Convert
+</button>
+
+</form>
+
+{% if result is not none %}
+
+<br>
+
+<h2>Result: {{ result }}</h2>
+
+{% endif %}
+
+<br><br>
+
+<a href="/">⬅ Back Home</a>
+
+</div>
+
+</body>
+</html>

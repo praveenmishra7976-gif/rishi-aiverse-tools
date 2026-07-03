@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    📝 Word Counter
+</div>
+
+<div class="hero">
+
+<h2>Word Counter</h2>
+
+<form method="POST">
+
+<textarea
+name="text"
+rows="10"
+cols="50"
+placeholder="Type or paste your text here..."
+required>{{ text }}</textarea>
+
+<br><br>
+
+<button type="submit">Count Words</button>
+
+</form>
+
+{% if text %}
+
+<h3>Total Words: {{ words }}</h3>
+
+<h3>Total Characters: {{ characters }}</h3>
+
+{% endif %}
+
+<br><br>
+
+<a href="/">⬅ Back Home</a>
+
+</div>
+
+</body>
+</html>

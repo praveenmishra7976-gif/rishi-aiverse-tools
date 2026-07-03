@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RISH AIverse Tools - 100% Free Online Tools</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="logo">
+🚀 RISH AIverse Tools
+</div>
+
+<div class="menu">
+
+<a href="/">Home</a>
+
+<a href="#popular">Popular</a>
+
+<a href="#categories">Categories</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+<button id="themeBtn" onclick="toggleTheme()">
+🌙
+</button>
+
+</div>
+
+<div class="hero">
+    <h1>100+ Free Online Tools</h1>
+    <p>Fast • Secure • Mobile Friendly • No Signup Required</p>
+
+   <input type="text" id="search" placeholder="🔍 Search Tools..." onkeyup="searchTools()">
+</div>
+<h2 id="popular" class="section-title">
+🔥 Popular Tools
+</h2>
+
+<div class="tools">
+
+<div class="card">
+<h3>📱 QR Code Generator</h3>
+<p>Create QR Codes instantly.</p>
+<a href="/qr">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>🔐 Password Generator</h3>
+<p>Create secure passwords.</p>
+<a href="/password">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>🎂 Age Calculator</h3>
+<p>Calculate your age instantly.</p>
+<a href="/age">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>⚖️ BMI Calculator</h3>
+<p>Check your BMI.</p>
+<a href="/bmi">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>📝 Word Counter</h3>
+<p>Count words in text.</p>
+<a href="/word-counter">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>🔤 Character Counter</h3>
+<p>Count characters instantly.</p>
+<a href="/character-counter">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>🔄 Text Case Converter</h3>
+<p>Convert text case.</p>
+<a href="/text-case">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>📦 Base64 Encoder</h3>
+<p>Encode & Decode Base64.</p>
+<a href="/base64">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>🔗 URL Encoder</h3>
+<p>Encode & Decode URLs.</p>
+<a href="/url-tool">Open Tool</a>
+</div>
+
+<div class="card">
+<h3>📏 Unit Converter</h3>
+<p>Convert common units.</p>
+<a href="/unit-converter">Open Tool</a>
+</div>
+
+</div>
+
+<h2 id="categories" class="section-title">
+📂 Categories
+</h2>
+
+<div class="tools">
+
+<div class="card">
+<h3>📝 Text Tools</h3>
+</div>
+
+<div class="card">
+<h3>🧮 Calculators</h3>
+</div>
+
+<div class="card">
+<h3>🖼 Image Tools</h3>
+</div>
+
+<div class="card">
+<h3>📄 PDF Tools</h3>
+</div>
+
+<div class="card">
+<h3>🤖 AI Tools</h3>
+</div>
+
+<div class="card">
+<h3>💻 Developer Tools</h3>
+</div>
+<section id="about" class="hero">
+
+<h2>About RISH AIverse Tools</h2>
+
+<p>
+
+RISH AIverse Tools provides fast, secure and completely free online tools for students, developers, creators and professionals.
+
+</p>
+
+</section>
+
+<section id="contact" class="hero">
+
+<h2>Contact</h2>
+
+<p>
+
+Email:
+support@rishaiverse.com
+
+</p>
+
+</section>
+</div>
+
+<footer class="footer">
+
+<h3>RISH AIverse Tools</h3>
+
+<p>100% Free Online Tools for Everyone.</p>
+
+<p>© 2026 RISH AIverse Tools. All Rights Reserved.</p>
+
+</footer>
+<script>
+
+function searchTools(){
+
+let input=document.getElementById("search").value.toLowerCase();
+
+let cards=document.getElementsByClassName("card");
+
+for(let i=0;i<cards.length;i++){
+
+let text=cards[i].innerText.toLowerCase();
+
+if(text.indexOf(input)>-1){
+
+cards[i].style.display="block";
+
+}
+
+else{
+
+cards[i].style.display="none";
+
+}
+
+}
+
+}
+
+</script>
+<script>
+
+if(localStorage.getItem("theme")=="dark"){
+document.body.classList.add("dark");
+document.getElementById("themeBtn").innerHTML="☀️";
+}
+
+function toggleTheme(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+
+localStorage.setItem("theme","dark");
+
+document.getElementById("themeBtn").innerHTML="☀️";
+
+}else{
+
+localStorage.setItem("theme","light");
+
+document.getElementById("themeBtn").innerHTML="🌙";
+
+}
+
+}
+
+</script>
+</body>
+</html>

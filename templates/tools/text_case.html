@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Case Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    🔄 Text Case Converter
+</div>
+
+<div class="hero">
+
+<h2>Convert Text Case</h2>
+
+<form method="POST">
+
+<textarea
+name="text"
+rows="8"
+cols="50"
+placeholder="Enter your text here..."
+required>{{ text }}</textarea>
+
+<br><br>
+
+<button type="submit" name="action" value="upper">UPPERCASE</button>
+<button type="submit" name="action" value="lower">lowercase</button>
+<button type="submit" name="action" value="title">Title Case</button>
+<button type="submit" name="action" value="capitalize">Capitalize</button>
+
+</form>
+
+{% if result %}
+
+<br>
+
+<h3>Result</h3>
+
+<textarea rows="8" cols="50" readonly>{{ result }}</textarea>
+
+{% endif %}
+
+<br><br>
+
+<a href="/">⬅ Back Home</a>
+
+</div>
+
+</body>
+</html>
